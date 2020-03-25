@@ -224,7 +224,7 @@ gp.fam<-classifier$Family
 col.gp.fam <- brewer.pal(length(levels(gp.fam)), "RdBu")
 names(col.gp.fam) <- levels(gp.fam)
 col.gp.fam <- col.gp.fam[match(gp.fam, names(col.gp.fam))] 
-pc.plot.fam <- plotAllometry(fit, size = gpa_All_Eoc_Cypr$Csize, logsz = TRUE, method = "size.shape", pch = 19, col = col.gp.fam)
+pc.plot.fam <- plotAllometry(fit.fam.simp, size = gpa_All_Eoc_Cypr$Csize, logsz = TRUE, method = "size.shape", pch = 19, col = col.gp.fam)
 summary(pc.plot.fam$size.shape.PCA)
 
 #plot by distributionVSfamily
@@ -234,7 +234,7 @@ DisFam <- interaction(classifier$Distribution, classifier$Family)
 col.gp.DisFam <- brewer.pal(length(levels(DisFam)), "RdBu")
 names(col.gp.DisFam) <- levels(DisFam)
 col.gp.DisFam <- col.gp.DisFam[match(DisFam, names(col.gp.DisFam))] 
-pc.plot.fam <- plotAllometry(fit, size = gpa_All_Eoc_Cypr$Csize, logsz = TRUE, method = "size.shape", pch = 19, col = col.gp.DisFam)
+pc.plot.fam <- plotAllometry(fit.dist.simp, size = gpa_All_Eoc_Cypr$Csize, logsz = TRUE, method = "size.shape", pch = 19, col = col.gp.DisFam)
 summary(pc.plot.fam$size.shape.PCA)
 
 
